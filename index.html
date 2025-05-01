@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="blomma3.png" type="image/x-icon" />
+    <title>Anna Thunberg - Developer Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav id="desktop-nav">
+        <div class="nav-wrapper">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="social-icons">
+            <li>
+              <a href="https://github.com/annatbg" target="_blank">
+                <img src="GitHub.png" alt="GitHub icon" class="icon" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/anna-thunberg-dev/"
+                target="_blank"
+              >
+                <img
+                  src="LinkedIn-Circled.png"
+                  alt="LinkedIn icon"
+                  class="icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <button
+            class="hamburger-icon"
+            aria-label="Menu"
+            onclick="toggleMenu()"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="profile">
+        <div id="profile-wrapper">
+          <h1 id="profile-headline">Anna Thunberg</h1>
+          <p id="profile-text">
+            I'm a creative developer focused on AI, security, and tech that
+            makes life easier. I enjoy combining logic and design, and I'm
+            deepening my skills in ethical, practical AI to build responsible,
+            human-centered solutions.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+          <h3>SkinLog</h3>
+          <p>
+            A personal project where I explore how to combine skin tracking,
+            thoughtful design, and AI support in an ethical, inclusive way. I'm
+            building it from scratch to learn app development and AI integration
+            hands-on — and to create something I personally want to use. While
+            it’s a personal learning project for now, I’m open to developing it
+            further.
+          </p>
+          <a
+            href="https://skinlog.app/"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >Read More</a
+          >
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your message"
+            required
+          ></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Anna Thunberg</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        const icon = document.querySelector(".hamburger-icon");
+        menu.classList.toggle("open");
+        icon.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
